@@ -81,4 +81,4 @@
         1*2*3*4*...*n
     怎样表示？
         流程图：流程图表示算法，直观形象，易于理解。    
-        ![流程图表示](https://github.com/zeerre/NOIP/blob/master/C-C%2B%2B%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E8%AF%BE/1.png)
+        ![流程图表示](1.png)
