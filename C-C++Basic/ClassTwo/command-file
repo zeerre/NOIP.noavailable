@@ -10,10 +10,10 @@ git checkout branch-name
 git checkout -b branch-name
 
 git reset --hard
-git clean -xdf
+git clean -df
 
 git checkout .
-git clean -xdf
+git clean -df
 
 git checkout -- *
 git checkout -- filename
