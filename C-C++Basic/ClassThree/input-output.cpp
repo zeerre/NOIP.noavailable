@@ -8,5 +8,7 @@ int main(){
     cin>>var;
     cout<< var;
     printf("%d",var);
+    printf("%d",sizeof(var));
+    
     return 0;
 }
