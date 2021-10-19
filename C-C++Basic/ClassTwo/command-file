@@ -1,0 +1,36 @@
+git --help
+git status
+git log
+
+git branch --help
+
+git branch -a 
+
+git checkout branch-name
+git checkout -b branch-name
+
+git reset --hard
+git clean -xdf
+
+git checkout .
+git clean -xdf
+
+git checkout -- *
+git checkout -- filename
+git merge
+
+git reset -hard HEAD^
+git remote -v
+
+git remote add remote-branch-name  git@github.com:name/projectname.git
+git fetch remote-branch-name
+git checkout local-branch-name
+git merge remote-branch-name
+git push origin remote-local-branch-name
+
+git pull
+
+git add .
+git commit -m "comment"
+git push origin branch-name
+
