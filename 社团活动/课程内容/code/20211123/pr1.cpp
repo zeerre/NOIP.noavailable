@@ -21,4 +21,4 @@ int main(){
           t++;
           if (t%5==0) cout<<endl;
       }
-     return 0;}
+    return 0;}
