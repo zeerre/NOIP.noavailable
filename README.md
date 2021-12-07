@@ -25,7 +25,7 @@
 ## 克隆远程仓库到本地并同步远程仓库（到本地）
 
 ```
-    git clone git@github.com/yourname/NOIP.git 
+    git clone git@github.com:yourname/NOIP.git 
     cd NOIP
     git pull
 
@@ -34,7 +34,7 @@
 ## 同步主远程仓库（remote repository）
 
 ```
-    git remote add NOIP git@github.com/zeerre/NOIP.git
+    git remote add NOIP git://github.com/zeerre/NOIP.git
     git fetch NOIP
     git checkout master
     git merge NOIP/master
