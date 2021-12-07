@@ -14,11 +14,14 @@ using namespace std;
 char s[255]; 
 int main(){
     int len,ss=0;
-    cin.getline(s,255);
+    //gets(s);
+    scanf("%s",s);
+    //cin.getline(s,255);
     len=strlen(s);
     for(int i=0;i<len;i++)
 		if(s[i]>='0'&&s[i]<='9')
 			ss++;    
-	printf("%d",ss);
+	  printf("%d\n",ss);
+    return 0;
 
 }
