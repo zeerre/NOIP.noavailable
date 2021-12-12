@@ -13,7 +13,7 @@ long long resum(long long n){
     if (n <= 0)
         sum = 0;
     else
-        sum= n + ad( n-1);
+        sum= n + resum( n-1);
     return sum;
 }
 
