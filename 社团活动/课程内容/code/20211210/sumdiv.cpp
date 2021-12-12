@@ -8,6 +8,7 @@
 #include<iostream>
 using namespace std;
 int const maxNum=1000;
+//int const maxNum(1000);  //与上一句代码功能相同
 int num_1,num_2;
 int divSum(int x){
     int sum=0;
