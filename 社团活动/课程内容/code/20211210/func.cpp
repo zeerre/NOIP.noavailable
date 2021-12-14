@@ -13,7 +13,7 @@ int main() {
     int a,b,c;
     cin>>a>>b>>c;
     swap(a,b,c);
-    cout<<a<<b<<c<<endl;
+    cout<<a<<" "<<b<<c<<endl;
     return 0;
 }
 void swap(int x,int y,int z){

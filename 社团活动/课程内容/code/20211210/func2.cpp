@@ -13,12 +13,14 @@ int main() {
     int a,b;
     cin>>a>>b;
     cout<<ma(a,b);
+
     return 0;
 }
 
 int ma(int x,int y){
     if(x>=y)
-        return x;
+        return x+=1;
     else
         return y;
 }
+int a=0;
