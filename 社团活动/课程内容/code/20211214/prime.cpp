@@ -12,9 +12,9 @@ int main(){
 	int n;
 	scanf("%d",&n);
 	if (prime(n))
-	  printf("%s\n","yes");
+	  printf("yes");
 	else 
-	  printf("%s\n","no");
+	  printf("no");
 	return 0;
 }
 int prime(int x){                //判断x是否素数的函数
