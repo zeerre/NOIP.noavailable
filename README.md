@@ -5,7 +5,7 @@
 ```
 ## fork 本地的远程仓库
 
-注册 Github 并登陆，打开本仓库（github 全站搜索 NOIP），点击 `Fork`。
+注册 Github 并登陆，打开本仓库（github 全站搜索 zeerre/NOIP），点击 `Fork`。
 
 ## 创建本地与远程仓库的 ssh 公钥
 
