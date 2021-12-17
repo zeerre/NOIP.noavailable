@@ -17,7 +17,7 @@ int main() {
     return 0;
 }
 long long fibo(int n){
-    long long s;
+    long long s,sum=0;
     if(n==0) s=0;
     if(n==1) s=1;
     if(n>1) s=fibo(n-1)+fibo(n-2);
