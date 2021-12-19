@@ -9,7 +9,9 @@
 using namespace std;
 int a[1000];
 int trans(int,int);
+void checkrep(int[],int);
 void swap(int[],int,int);
+void printarr(int[],int);
 int ret;
 int main(){
     int m,n;
@@ -37,6 +39,9 @@ int trans(int x,int y){
                     ret-=1;
             }
         }
+        //checkrep(b,y);
+        printarr(b,y);
+
     }
     else{
         //for(int j=0;j<y;j++){
@@ -45,6 +50,8 @@ int trans(int x,int y){
             b[i]=a[i];
             ret+=1;
         }
+        //checkrep(b,y);
+        printarr(b,y);
         //}
         for(int i=0;i<x;i++){
             for(int j=x-1;j>i;j--){
@@ -62,6 +69,7 @@ int trans(int x,int y){
             }
             if(flag==x){
                 swap(b,x,a[j]);
+                printarr(b,y);
                 ret+=1;
             }
         }
@@ -73,4 +81,21 @@ void swap(int c[],int z,int k){
     c[z]=k;
     for(int i=0;i<z;i++)
         c[i]=c[i+1];
+}
+
+void checkrep(int c[],int z){
+    for(int i=z-1;i<=0;i--){
+        for(int j=z-1;j<=0;j--){
+            if(i!=j&&c[j]==c[i]){
+                c[j-1]=c[j];
+            }
+        }
+    }
+}
+
+void printarr(int b[],int x){
+    for(int i=0;i<x;i++){
+        cout<<b[i]<<" ";
+    }
+    cout<<endl;
 }
