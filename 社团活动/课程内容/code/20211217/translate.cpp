@@ -9,7 +9,8 @@
 using namespace std;
 int a[1000];
 int trans(int,int);
-void checkrep(int[],int);
+int checkrep(int[],int[],int,int);
+void checkrepp(int[],int[],int,int,int);
 void swap(int[],int,int);
 void printarr(int[],int);
 int ret;
@@ -18,7 +19,7 @@ int main(){
     cin>>m>>n;
     for(int i=0;i<n;i++)
         cin>>a[i];
-    cout<< trans(m,n);
+    cout<< trans(m,n)<<endl;
     //cout<<ret;
     return 0;
 }
@@ -26,53 +27,47 @@ int main(){
 int trans(int x,int y){
     int flag,rep;
     ret=0;
-    int b[x+1]{0};
-    
+    int b[x]{0};
+    int k=0,kk;
+    b[k]=a[k];
+    ret+=1;
     if(x>=y){
-        for(int i=0;i<y;i++){
-            b[i]=a[i];
-            ret+=1;
-        }
-        for(int i=0;i<y;i++){
-            for(int j=i+1;j<y;j++){
-                if(b[j]==a[i])
-                    ret-=1;
-            }
-        }
-        //checkrep(b,y);
-        printarr(b,y);
-
+        kk=checkrep(a,b,y,k);
+        printarr(b,kk+1);
     }
     else{
-        //for(int j=0;j<y;j++){
+        // for(int i=1;i<x;i++){
+        //     if(a[i]!=b[k]){
+        //         k+=1;
+        //         b[k]=a[i];
+        //         ret+=1;
+        //     }else 
+        //         continue;
+        // }
+        // printarr(b,x);
+        // //}
+        // for(int i=0;i<x;i++){
+        //     for(int j=x-1;j>i;j--){
+        //         if(b[j]==a[i])
+        //             ret-=1;
+        //     }
+        // }
+        // for(int j=x;j<y;j++){
+        //     flag=0;
+        //     for(int i=0;i<x;i++){
+        //         if(a[j]==b[i])
+        //             continue;
+        //         else
+        //             flag+=1;
+        //     }
+        //     if(flag==x){
+        //         swap(b,x,a[j]);
+        //         printarr(b,y);
+        //         ret+=1;
+        //     }
+        // }
+        checkrepp(a,b,x,y,k);
         
-        for(int i=0;i<x;i++){
-            b[i]=a[i];
-            ret+=1;
-        }
-        //checkrep(b,y);
-        printarr(b,y);
-        //}
-        for(int i=0;i<x;i++){
-            for(int j=x-1;j>i;j--){
-                if(b[j]==a[i])
-                    ret-=1;
-            }
-        }
-        for(int j=x;j<y;j++){
-            flag=0;
-            for(int i=0;i<x;i++){
-                if(a[j]==b[i])
-                    continue;
-                else
-                    flag+=1;
-            }
-            if(flag==x){
-                swap(b,x,a[j]);
-                printarr(b,y);
-                ret+=1;
-            }
-        }
     }
     return ret;
 }
@@ -83,14 +78,50 @@ void swap(int c[],int z,int k){
         c[i]=c[i+1];
 }
 
-void checkrep(int c[],int z){
-    for(int i=z-1;i<=0;i--){
-        for(int j=z-1;j<=0;j--){
-            if(i!=j&&c[j]==c[i]){
-                c[j-1]=c[j];
+void checkrepp(int c[],int d[],int o,int p,int q){
+    int flag;
+    for(int i=1;i<p;i++){
+        flag=0;
+        for(int j=0;j<=q;j++){
+            if(i!=j&&c[i]==d[j]){
+                flag=1;
+                break;
             }
         }
+        
+        if(!flag){
+            q++;
+            d[q]=c[i];
+            if(q%o==0){
+                for(int l=0;l<o;l++){
+                    d[l]=d[l+1];
+                }
+            }
+            ret+=1;
+            printarr(d,q+1);
+        }
+        
     }
+    //return q;
+}
+
+int checkrep(int c[],int d[],int o,int p){
+    int flag;
+    for(int i=1;i<o;i++){
+        flag=0;
+        for(int j=0;j<=p;j++){
+            if(i!=j&&c[i]==d[j]){
+                flag=1;
+                break;
+            }
+        }
+        if(!flag){
+            p++;
+            d[p]=c[i];
+            ret+=1;
+        }
+    }
+    return p;
 }
 
 void printarr(int b[],int x){
