@@ -31,9 +31,10 @@ int trans(int x,int y){
     int k=0,kk;
     b[k]=a[k];
     ret+=1;
+    //printarr(b,k+1);
     if(x>=y){
         kk=checkrep(a,b,y,k);
-        printarr(b,kk+1);
+        //printarr(b,kk+1);
     }
     else{
         // for(int i=1;i<x;i++){
@@ -67,6 +68,7 @@ int trans(int x,int y){
         //     }
         // }
         checkrepp(a,b,x,y,k);
+        //printarr(b,x+1);
         
     }
     return ret;
@@ -92,13 +94,17 @@ void checkrepp(int c[],int d[],int o,int p,int q){
         if(!flag){
             q++;
             d[q]=c[i];
-            if(q%o==0){
-                for(int l=0;l<o;l++){
-                    d[l]=d[l+1];
-                }
-            }
             ret+=1;
-            printarr(d,q+1);
+            if(q==o){
+                int te=d[q];
+                for(int l=0;l<o-1;l++){
+                    d[l]=d[l+1];
+
+                }
+                //d[o-1]=d[q];
+                //printarr(d,q+1);
+            }
+            //printarr(d,q+1);
         }
         
     }
