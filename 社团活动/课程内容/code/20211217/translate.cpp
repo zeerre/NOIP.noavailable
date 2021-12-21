@@ -36,38 +36,7 @@ int trans(int x,int y){
         printarr(b,kk+1);
     }
     else{
-        // for(int i=1;i<x;i++){
-        //     if(a[i]!=b[k]){
-        //         k+=1;
-        //         b[k]=a[i];
-        //         ret+=1;
-        //     }else 
-        //         continue;
-        // }
-        // printarr(b,x);
-        // //}
-        // for(int i=0;i<x;i++){
-        //     for(int j=x-1;j>i;j--){
-        //         if(b[j]==a[i])
-        //             ret-=1;
-        //     }
-        // }
-        // for(int j=x;j<y;j++){
-        //     flag=0;
-        //     for(int i=0;i<x;i++){
-        //         if(a[j]==b[i])
-        //             continue;
-        //         else
-        //             flag+=1;
-        //     }
-        //     if(flag==x){
-        //         swap(b,x,a[j]);
-        //         printarr(b,y);
-        //         ret+=1;
-        //     }
-        // }
         checkrepp(a,b,x,y,k);
-        
     }
     return ret;
 }
@@ -88,7 +57,6 @@ void checkrepp(int c[],int d[],int o,int p,int q){
                 break;
             }
         }
-        
         if(!flag){
             q++;
             d[q]=c[i];
@@ -100,7 +68,6 @@ void checkrepp(int c[],int d[],int o,int p,int q){
             ret+=1;
             printarr(d,q+1);
         }
-        
     }
     //return q;
 }
