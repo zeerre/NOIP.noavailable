@@ -1,0 +1,4 @@
+I am going on learning C++;
+"It's very hard."
+So I must be study hard.
+Just so so.
