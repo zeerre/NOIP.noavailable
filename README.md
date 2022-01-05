@@ -27,6 +27,8 @@
 ```
     git clone git@github.com:yourname/NOIP.git 
     cd NOIP
+    git config user.name "yourname"
+    git config user.email "your_sign_up_email"
     git pull
 
 ```
