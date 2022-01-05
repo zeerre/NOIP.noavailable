@@ -12,16 +12,17 @@ using namespace std;
 int main(){
     
     FILE *file;
-
+    file=fopen("fget_file.txt","r");
     char a[100];
 
     // string b;
     // getline(cin,b);
 
-    if((file=fopen("fget_file.txt","r"))!= NULL){
+    if(file!= NULL){
         while(fgets(a, 100, file)!= NULL)
             printf("%s",a);
-        fclose(file);
+        
     }
+    fclose(file);
     return 0;
 }
