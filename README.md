@@ -56,3 +56,7 @@
 
 打开网页登陆到 Github，进入本地远程仓库（locale remote repository），
 点击提交 PR。
+
+## 本页面的说明：
+
+[请点击本域名](https://zeerre.github.io/NOIP)
