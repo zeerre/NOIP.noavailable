@@ -1,37 +1,58 @@
-## Welcome to GitHub Pages
+# 关于 git 命令：
 
-You can use the [editor on GitHub](https://github.com/zeerre/NOIP/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+```
+  git --help
+```
+## fork 本地的远程仓库
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+注册 Github 并登陆，打开本仓库（github 全站搜索 zeerre/NOIP），点击 `Fork`。
 
-### Markdown
+## 创建本地与远程仓库的 ssh 公钥
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+  ssh-keygen -t rsa -C "your email"
+```
+在本地当前用户的根目录下，找到 **.ssh** 文件夹下的 **id_rsa.pub** 文件并复制文件内容。
+```
+  cd ~
+  cd .ssh
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## 建立本地与远程仓库 ssh 关联
 
-### Jekyll Themes
+登陆 Github ，进入 **Setting** -> SSH and GPG key,将 **id_rsa.pub** 粘贴到指定位置，然后确认。
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zeerre/NOIP/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## 克隆远程仓库到本地并同步远程仓库（到本地）
 
-### Support or Contact
+```
+    git clone git@github.com:yourname/NOIP.git 
+    cd NOIP
+    git pull
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```
+
+## 同步主远程仓库（remote repository）
+
+```
+    git remote add NOIP git://github.com/zeerre/NOIP.git
+    git fetch NOIP
+    git checkout master
+    git merge NOIP/master
+    git push origin master
+
+```
+
+## 提交 Issue
+
+修改本地文件并保存后，
+
+```
+    git add .
+    git commit -m "本次提交文件注释内容"
+    git push origin master
+```
+
+## 提交向主仓库的 PR（pull requests)
+
+打开网页登陆到 Github，进入本地远程仓库（locale remote repository），
+点击提交 PR。
