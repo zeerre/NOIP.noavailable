@@ -12,7 +12,7 @@ int palind(int);
 int main() {
     int n;
     cin>> n;
-    for(int i=1;i<=n;i++){
+    for(int i=100;i<=n;i++){
         if(palind(i))
             cout<<i<<" is palind Yes"<<endl;
         else

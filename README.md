@@ -27,6 +27,8 @@
 ```
     git clone git@github.com:yourname/NOIP.git 
     cd NOIP
+    git config user.name "yourname"
+    git config user.email "your_sign_up_email"
     git pull
 
 ```
@@ -36,9 +38,9 @@
 ```
     git remote add NOIP git://github.com/zeerre/NOIP.git
     git fetch NOIP
-    git checkout master
+    git checkout -b yournewbranchname
     git merge NOIP/master
-    git push origin master
+    git push origin yournewbranchname
 
 ```
 
