@@ -59,4 +59,4 @@
 
 ## 本页面的说明：
 
-[请点击本域名](https://zeerre.github.io/NOIP)
+[请点击本域名](https://zeerre.github.io/NOIP),了解关于 GitHub 远程仓库与本地仓库的简单管理。祝好运！！！
