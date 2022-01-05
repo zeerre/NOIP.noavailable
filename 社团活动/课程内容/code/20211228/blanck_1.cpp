@@ -11,16 +11,16 @@
 using namespace std;
 int main(){
     char b[100];
-    FILE *fp= fopen("temp.txt", "w+");
+    FILE *fp= fopen("fput_file1.txt", "w+");
     fputs("Hello China!", fp);
     // string b;
     // getline(cin,b);
-
-    if((fp=fopen("fput_file.txt", "r"))!= NULL){
+    fclose(fp);
+    if((fp=fopen("fput_file1.txt", "r"))!= NULL){
         while(fgets(b, 100, fp)!= NULL)
             printf("%s",b);
         fclose(fp);
     }
-
+    
     return 0;
 }
