@@ -11,6 +11,10 @@ using namespace std;
 int main() {
     freopen("in.txt","r",stdin);
     freopen("out.txt","w",stdout);
-    
+    printf("Hello!!\n");
+    fputs("test\n",stdout);
+    char a[100];
+    while(fgets(a,100,stdin)!=NULL)
+        printf("%s",a);
     return 0;
 }
