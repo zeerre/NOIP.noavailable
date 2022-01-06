@@ -10,7 +10,7 @@
 int a[11][11];
 using namespace std;
 int main(){
-    int n;                          //n<=11
+    int n;                          //n<=10
     cin>>n;
 
     a[1][1]=1;                      //设定第一行的值
@@ -21,7 +21,7 @@ int main(){
             a[i][j]=a[i-1][j-1]+a[i-1][j];    //每个数等于上一行的两个数之和
     }
     for (int i=1; i<=n; i++){
-        if (i!=10) 
+        if (i<=10) 
             cout<<setw(30-3*i)<<" ";    //控制每行的起始位置，即空格数量
         for (int j=1; j<=i; j++) 
             cout<<setw(6)<<a[i][j];
