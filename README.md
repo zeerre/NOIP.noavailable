@@ -38,13 +38,13 @@
 ```
     git remote add NOIP git://github.com/zeerre/NOIP.git
     git fetch NOIP
-    git checkout -b yournewbranchname
+    git checkout master
     git merge NOIP/master
-    git push origin yournewbranchname
+    git push origin master
 
 ```
 
-## 提交 Issue
+## 提交修改
 
 修改本地文件并保存后，
 
@@ -58,3 +58,12 @@
 
 打开网页登陆到 Github，进入本地远程仓库（locale remote repository），
 点击提交 PR。
+
+## 关于 Issue
+
+利用浏览器打开远程仓库，点击 **Issues** ,你就可以参与开放的 `Issues`，提出问题，至于怎么操作，感觉非常简单，不妨去试一试吧。
+祝你好运！！！
+
+## 本页面的说明：
+
+[请点击这里](https://zeerre.github.io/NOIP),了解关于 GitHub 远程仓库与本地仓库的简单管理的网页页面。祝好运！！！
