@@ -7,16 +7,16 @@
 	const		用来创建一个具有不变值的变量
 	continue	跳过接下来的语句（通常和break一样用在循环体中）
 	default		在switch语句中使用，通常是默认情况
-	do			用在 do...while 循环语句
+	do		用在 do...while 循环语句
 	double		创建一个8字节的变量
 	else		使用在if...else... 选择结构中
 	enum		用来创建枚举类型
 	extern		存储类修饰符
 	float		创建一个4字节的变量
-	for			用在for循环（循环结构）
+	for		用在for循环（循环结构）
 	goto		触发控制跳转到指定位置
-	if			用在if选择结构
-	int			创建一个2/4个字节的变量
+	if		用在if选择结构
+	int		创建一个2/4个字节的变量
 	long		创建一个8字节的变量
 	register	创建比普通变量快的多的寄存器变量
 	return		终止函数并返回指定值
