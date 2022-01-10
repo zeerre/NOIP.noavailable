@@ -7,13 +7,15 @@
 
 #include <iostream>
 #include <cstdio>
+#define N 10001
 #include "factorial.cpp"
+
 using namespace std;
 int main(){
 	int n;
 	scanf("%d",&n);
-	int s[10000]{0},a[10000]{0};
-	s[10000]=a[10000]=1;
+	int s[N]{0},a[N]{0};
+	s[N-1]=a[N-1]=1;
 	for(int i=2;i<=n;i++){
 		product(a,i);
 		sum(s,a);
