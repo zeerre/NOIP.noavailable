@@ -20,7 +20,7 @@ void power_nor(int x){
 		}
 		--q;            //计算幂，由于这里会多算一次，所以计数器q-1; 
 		if(q==0 || q==2)    
-            printf("(%d)",q);
+            		printf("(%d)",q);
 		//各种括号的判断
         if(q>=3){
 			printf("("); 
@@ -30,13 +30,13 @@ void power_nor(int x){
 		x-=p/2;         //上面计数器就是多算了一次，因此p也多乘了一个2; 
 		if(x){          //输入的数x为真（最后分解完就成0了，变成假），输出"+"; 
 			printf("+");
-            power_nor(x);
+            		power_nor(x);
 		}
 	}
 }
 int main(){
 	scanf("%d",&n);
 	power_nor(n);
-    printf("\n");
+    	printf("\n");
 	return 0;	
 } 
