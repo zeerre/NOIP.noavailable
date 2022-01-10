@@ -9,8 +9,7 @@
 const int m=N-1;
 void product(int a[],int x){	
 	int g=0;
-	for(int i=m;i>=0;i--)
-	{
+	for(int i=m;i>=0;i--){
 		a[i]=a[i]*x+g;
 		g=a[i]/10;
 		a[i]=a[i]%10;
