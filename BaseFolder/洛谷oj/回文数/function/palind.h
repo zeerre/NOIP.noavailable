@@ -7,9 +7,11 @@
 
 #ifndef _PALIND_H
 #define _PALIND_H
-void add(int[], int[]);
-void turn(int,int[]);
-bool f(int[]);
-void init(int[],string);
+
+void init_arr(int[],char[],int);
+void add(int[],int[],int,int);
+void turn(int[],int[],int);
+bool f(int[],int);
+
 
 #endif
