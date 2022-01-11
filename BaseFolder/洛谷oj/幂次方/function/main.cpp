@@ -6,8 +6,14 @@
 //*************************************************************************
 
 #include <iostream>
+#define N 100000
+#include "power_fun.cpp"
 using namespace std;
 int main() {
-
-    return 0;
+    long long n;
+	scanf("%lld",&n);
+	power_bit_oper(n);
+    printf("\n");
+    power_bit_print(n);
+	return 0;
 }

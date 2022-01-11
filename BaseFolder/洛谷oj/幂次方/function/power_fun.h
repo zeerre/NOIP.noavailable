@@ -7,5 +7,6 @@
 
 #ifndef _POWER_FUN_H
 #define _POWER_FUN_H
-
+void power_bit_oper(long long);
+void power_bit_print(long long);
 #endif
