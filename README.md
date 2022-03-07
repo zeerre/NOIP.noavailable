@@ -1,4 +1,4 @@
-# 关于 git 命令：
+# 关于 GitHub 远程仓库操作的git 命令：
 
 ```
   git --help
