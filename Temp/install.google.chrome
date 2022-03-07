@@ -1,0 +1,7 @@
+命令行安装谷歌浏览器
+
+1.wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+2.dpkg -i google-chrome-stable_current_amd64.deb
+
+3.Over.
