@@ -11,11 +11,12 @@ using namespace std;
 void TurnData(int n,int a);
 char ch[6]={'A','B','C','D','E','F'};
 int main(){
-    int n;  
-    cin>>n;
-    TurnData(n,2);      //n转成2进制数
-    TurnData(n,8);      //n转成8进制数
-    TurnData(n,16);    //n转成16进制数
+    int n,m;  
+    cin>>n>>m;
+    //TurnData(n,2);      //n转成2进制数
+    //TurnData(n,8);      //n转成8进制数
+    //TurnData(n,16);     //n转成16进制数
+    TurnData(n,m);        //n转成m进制
     return 0;
 }
 void TurnData(int n,int a){
