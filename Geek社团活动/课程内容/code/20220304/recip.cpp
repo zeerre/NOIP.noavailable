@@ -10,7 +10,7 @@ using namespace std;
 void reci(int);
 
 int main() {
-    int n,temp;
+    int n;
     cin>>n;
     reci(n);
     return 0;
