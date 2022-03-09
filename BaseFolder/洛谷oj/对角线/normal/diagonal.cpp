@@ -17,7 +17,7 @@ int main(){
     freopen("out.txt","w",stdout);
     long long n;
     scanf("%lld",&n);
-    int t=0;
+    
     for(int i=1;i<=n;i++){
         a[i]=a[i-1]+i;          //这里生成1,3,6,10序列
     }
