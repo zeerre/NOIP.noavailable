@@ -20,7 +20,7 @@ int main(){
     for(int i=0;i<n;i++)
         cin>>a[i];
     cout<< trans(m,n)<<endl;
-    //cout<<ret;
+    //printarr(a,ret);
     return 0;
 }
 
