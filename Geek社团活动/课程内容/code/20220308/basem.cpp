@@ -7,36 +7,40 @@
 
 #include <iostream>
 using namespace std;
-void turns(int,int);
-void outs(int[]);
-char ch[6]={'A','B','C','D','E','F'};
+void turns(int,int);            //定义进制转换函数；
+void outs(int[],int);           //定义输出转制后的结果函数；
+char ch[6]={'A','B','C','D','E','F'};   //处理余数大于10小于15的数组
+int k=0,i,x[100];               //全局变量，x[100]数组存取余数数组，k控制已经存储余数的数组边界
 int main() {
     int m,n;
-    int k=0,i,x[100];
     cout<<"Please input Number and NumS: ";
     cin>>m>>n;
-    cout<<m<<" turn into "<<n<<"   : "<<endl;
+    cout<<m<<" turn into "<<n<<" is : ";
     turns(m,n);
-    outs(ch);
+    outs(x,k);
+    cout<<endl;
     return 0;
 }
 
 void turns(int m,int n){
-    if(m<n){
-        if(m<10){
-            k++;
-            x[k]=m;
-            //cout<<m;
-            return;
-        }else{
-            k++;
-            x[k]=ch[m-10];
-            return;
-        }
-    }else{
+    
+    if(m<n){                    //无论余数是多少，都存储到数组x[k]
+        k++;
+        x[k]=m;
+    }else{                      //这个过程很好理解，递归求剩余部分的余数，直到m<n
         k++;
         x[k]=m%n;
         turns(m/n,n);
     }
 
+}
+void outs(int a[],int i){       //倒序打印数组，最先求出来的是最低位
+    for(int j=i;j>0;j--){
+        
+        if(a[j]<10){
+            cout<<a[j];
+        }else{
+            cout<<ch[a[j]-10];
+        }
+    }
 }
