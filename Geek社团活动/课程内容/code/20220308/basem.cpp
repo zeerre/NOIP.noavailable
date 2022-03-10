@@ -4,12 +4,12 @@
 //* Mail:zeerre98988@gmail.com 
 //* Created And Modified Time: ====2022-03-09  14-54-15====
 //*************************************************************************
-
+//将十进制数转换成n(n<=20)进制数
 #include <iostream>
 using namespace std;
 void turns(int,int);            //定义进制转换函数；
 void outs(int[],int);           //定义输出转制后的结果函数；
-char ch[6]={'A','B','C','D','E','F'};   //处理余数大于10小于15的数组
+char ch[10]={'A','B','C','D','E','F','G','H','I','J'};   //处理余数大于10小于20的数组
 int k=0,i,x[100];               //全局变量，x[100]数组存取余数数组，k控制已经存储余数的数组边界
 int main() {
     int m,n;
