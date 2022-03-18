@@ -34,7 +34,7 @@ void turns(int m,int n){
     }
 
 }
-void outs(int a[],int i){       //倒序打印数组，最先求出来的是最低位
+void outs(int a[],int i){       //倒序打印数组，最先求出来的是最低位，这需要根据数组的数据与实际得到的内容来做决策。
     for(int j=i;j>0;j--){
         
         if(a[j]<10){
