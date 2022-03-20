@@ -38,9 +38,9 @@
 ```
     git remote add NOIP git://github.com/zeerre/NOIP.git
     git fetch NOIP
-    git checkout master
-    git merge NOIP/master
-    git push origin master
+    git checkout master_backup
+    git merge NOIP/master_backup
+    git push origin master_backup
 
 ```
 
@@ -51,7 +51,7 @@
 ```
     git add .
     git commit -m "本次提交文件注释内容"
-    git push origin master
+    git push origin master_backup
 ```
 
 ## 提交向主仓库的 PR（pull requests)
