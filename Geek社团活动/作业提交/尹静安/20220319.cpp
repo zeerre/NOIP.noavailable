@@ -7,23 +7,21 @@
 
 #include"stdio.h"
 using namespace std;
-int ack(int,int);
+int Hn(int,int);
 int main(){
-    int m,n;
-    printf("The Max num of m is 3 ; n is 10.\n");
-    scanf("%d %d",&m,&n);
-    printf("%d",ack(m,n));
+    int x,n,kel,sum=0;
+    printf("Please input x & n:\n");
+    scanf("%d %d",&x,&n);
+    for(int i=0;i<=n;i++){
+        kel=Hn(x,n);
+        sum+=kel;
+    }
+    printf("%d",sum);
     return 0;
 }
 
-int ack(int a,int b){   //The function is not overall.Think it.
-    if(a==0);
-        return b+1;
-    while(a>0){
-        if(b==0)
-            b=1;
-        else
-            b=ack(a,b-1);
-            a--;
-    }
+int Hn(int a,int b){    
+    if(b==0)
+        return 1;
+                        //接下来的内层循环应该如何用代码实现？代码是什么？
 }
