@@ -7,26 +7,47 @@
 
 #include"stdio.h"
 using namespace std;
-int ack(int,int);
+int Ack(int,int);
 int main(){
+    printf("The Maxnum of m/n is 3/10;\n Please input m&n:\n");   //警示信息
     int m,n,sum=0;
-    printf("The Max num of m is 3 ; n is 10.\n");
     scanf("%d %d",&m,&n);
-    sum+=ack(m,n);
-    printf("%d",sum);
+    sum+=Ack(m,n);
+    printf("The result is:\n %d",sum);
+}
+
+int Ack(int m,int n){
+    int tem;    //缓存变量
+    if(m==0)
+        tem=n+1;
+    if(m>0 && n==0)
+        tem=Ack(m-1,1);
+    if(m>0 && n>0)
+        tem=Ack(m-1,Ack(m,n-1));
+    return tem;
+}
+
+//----------上：阿克曼函数；下：埃尔米特函数----------
+
+#include"stdio.h"
+using namespace std;
+int Hn(int,int);
+int main(){
+    printf("Please input x&n:\n");
+    int x,n,sum=0;
+    scanf("%d %d",&x,&n);
+    sum+=Hn(x,n);
+    printf("The result is:\n %d",sum);
     return 0;
 }
 
-int ack(int a,int b){
-    if(a==0)
-        return b+1;
-    if(a!=0&&b==0){
-        b=1;
-        return ack(a,b);
-    }
-    if(a!=0&&b!=0){
-        b=ack(a,b-1);
-        a-=1;
-        return ack(a,b);
-    }
+int Hn(int x,int y){
+    int tem;
+    if(y==0)
+        tem=1;
+    if(y==1)
+        tem=2*x;
+    if(y>1)
+        tem=2*x*Hn(x,y-1)-2*(y-1)*Hn(x,y-2);
+    return tem;
 }
