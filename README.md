@@ -36,7 +36,7 @@
 ## 同步主远程仓库（remote repository）
 
 ```
-    git remote add NOIP git://github.com/zeerre/NOIP.git
+    git remote add NOIP https://github.com/zeerre/NOIP.git
     git fetch NOIP
     git checkout master_backup
     git merge NOIP/master_backup
