@@ -14,8 +14,14 @@ int main(){
     scanf("%d %d",&m,&n);
     sum+=Ack(m,n);
     printf("The result is:\n %d",sum);
+    printf("Please input x&n:\n");
+    int x,n,sum=0;
+    scanf("%d %d",&x,&n);
+    sum+=Hn(x,n);
+    printf("The result is:\n %d",sum);
+    return 0;
 }
-
+//____________________ackmann function
 int Ack(int m,int n){
     int tem;    //缓存变量
     if(m==0)
@@ -28,18 +34,6 @@ int Ack(int m,int n){
 }
 
 //----------上：阿克曼函数；下：埃尔米特函数----------
-
-#include"stdio.h"
-using namespace std;
-int Hn(int,int);
-int main(){
-    printf("Please input x&n:\n");
-    int x,n,sum=0;
-    scanf("%d %d",&x,&n);
-    sum+=Hn(x,n);
-    printf("The result is:\n %d",sum);
-    return 0;
-}
 
 int Hn(int x,int y){
     int tem;
